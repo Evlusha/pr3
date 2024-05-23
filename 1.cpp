@@ -13,7 +13,7 @@
 
 using namespace std;
 
-struct Motherboard {
+struct BD {
     string fio;
     string groupp;
     int timeMin;
@@ -21,7 +21,7 @@ struct Motherboard {
 
 int main() {
     setlocale(LC_ALL, "Rus");
-    vector<Motherboard> motherboards = {
+    vector<BD> bd = {
         {"Бурлаков", "АБС-324", -1},
         {"Деревянкин", "АБС-324", 0},
         {"Клаус", "АБС-324", -15},
@@ -32,12 +32,12 @@ int main() {
         {"Мокрушин", "АБС-324", 17},
         
     };
-    vector<Motherboard> result;
-    copy_if(motherboards.begin(), motherboards.end(), back_inserter(result),
-        [](const Motherboard& mb) {
+    vector<BD> result;
+    copy_if(bd.begin(), bd.end(), back_inserter(result),
+        [](const BD& mb) {
             return  mb.groupp == "АБС-324" and mb.timeMin > 0 ;
         });
     for (const auto& mb : result) {
-        cout << "Отчислен " << mb.fio << " " << mb.groupp << "По причине опоздания на" << " " << mb.timeMin << " минут" << endl;
+        cout << "Отчислен " << mb.fio << " " << mb.groupp << "По причине опоздания на " << " " << mb.timeMin << " минут" << endl;
     }
 }
