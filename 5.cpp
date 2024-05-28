@@ -10,7 +10,7 @@ using namespace std;
 
 int main() {
     setlocale(LC_ALL, "Rus");
-    string sentence = "атЭ ьщев ончыбо тисев в мотсуп екиньлидолох и юе язьлен ясьтавозьлоп ан 1 екиткарп ";
+    string sentence = "атЭ ьщев ончыбо тисев в мотсуп екиньлидолох и юе язьлен ясьтавозьлоп ан 1 екиткарп";
     istringstream iss(sentence);
     string word;
     string result;
@@ -20,11 +20,11 @@ int main() {
         result += word + " ";
     }
    
-    cout << "\nРеверсированные слова:\n " << result;
+    cout << "Реверсированные слова:\n " << result;
     cout << "\nВашь ответ ? \n" ;
     string otv;
     cin >> otv;
-    if (vopros == otv)
+    if (vopros != otv)
     {
         cout << "Вы гений ";
     }
